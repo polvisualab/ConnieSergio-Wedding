@@ -45,6 +45,10 @@ span {
   text-transform: uppercase;
 }
 
+p {
+  font-size: 0.8rem;
+}
+
 h2 {
   font-family: "Pinyon Script", cursive;
   font-size: 2.5rem;
@@ -314,6 +318,11 @@ footer {
     max-width: 400px;
     height: auto;
     mix-blend-mode: multiply;
+  }
+
+  p {
+    font-size: 0.8rem;
+    color: var(--color-secondary);
   }
 }
 
