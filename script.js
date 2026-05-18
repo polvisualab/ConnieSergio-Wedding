@@ -7,25 +7,22 @@ if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
     "(prefers-reduced-motion: reduce)",
   ).matches;
 
-  // ── Lenis ──────────────────────────────────────────────────────────────────
-  if (typeof Lenis !== "undefined" && !prefersReduced) {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smooth: true,
-      smoothTouch: true,
-    });
+  // // ── Lenis ──────────────────────────────────────────────────────────────────
+  // if (typeof Lenis !== "undefined" && !prefersReduced) {
+  //   const lenis = new Lenis({
+  //     duration: 1.2,
+  //     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  //     smooth: true,
+  //     smoothTouch: true,
+  //   });
 
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000); // gsap.ticker usa segundos, Lenis espera ms
-    });
-    gsap.ticker.lagSmoothing(0);
+  //   gsap.ticker.add((time) => {
+  //     lenis.raf(time * 1000); // gsap.ticker usa segundos, Lenis espera ms
+  //   });
+  //   gsap.ticker.lagSmoothing(0);
 
-    // ✅ Elimina el requestAnimationFrame manual — gsap.ticker es más fiable
-    // ✅ Elimina el refreshInit listener — no es necesario con este setup
-
-    window.lenis = lenis;
-  }
+  //   window.lenis = lenis;
+  // }
 
   // ── Textos por sección ─────────────────────────────────────────────────────
   const textSelector = "h1,h2,h3,h4,h5,p,li,span,strong,em,a,button";
