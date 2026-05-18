@@ -1,6 +1,12 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* Layout: body full-width and sections full-height except last */
 body {
-  width: 100vw;
+  width: 100%;
   margin: 0;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -46,7 +52,7 @@ span {
 }
 
 p {
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 h2 {
@@ -156,13 +162,22 @@ button:hover {
   text-align: center;
 }
 
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
 /* ----- HEADER ----- */
 header.cont-100vh {
   position: relative;
   height: 100vh;
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
+
+  .date-info {
+    font-size: 1.5rem;
+  }
 }
 
 header.cont-100vh video {
@@ -344,10 +359,13 @@ footer {
   transform: rotate(-15deg);
   transform-origin: center center;
   will-change: transform;
+  max-width: 100%;
 }
 
 /* ----- MAP EMBED ----- */
 .map-embed {
+  width: 100%;
+  overflow: hidden;
   height: 40%;
   border: 1px solid #40301e;
   border-radius: 1rem;
