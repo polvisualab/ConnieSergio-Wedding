@@ -62,6 +62,10 @@ li {
   font-weight: var(--font-sans-bold-weight);
 }
 
+a {
+  color: var(--color-secondary);
+}
+
 /* BUTTON */
 button {
   font-family: "Josefin Sans", sans-serif;
