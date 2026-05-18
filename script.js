@@ -125,3 +125,31 @@ if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
   // ✅ Refresh diferido un frame para que Lenis esté listo
   requestAnimationFrame(() => ScrollTrigger.refresh());
 }
+
+// ── Mobile autoplay fallback ───────────────────────────────────────────────────
+const heroVideo = document.getElementById("hero-video");
+if (heroVideo) {
+  heroVideo.muted = true;
+  heroVideo.playsInline = true;
+
+  // Intenta reproducir de inmediato; si se rechaza, espera la primera interacción.
+  const startVideo = () => {
+    const playPromise = heroVideo.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        const unlockEvent = "ontouchstart" in window ? "touchstart" : "click";
+        const unlock = () => {
+          heroVideo.play().finally(() => {
+            window.removeEventListener(unlockEvent, unlock, { passive: true });
+          });
+        };
+        window.addEventListener(unlockEvent, unlock, {
+          passive: true,
+          once: true,
+        });
+      });
+    }
+  };
+
+  startVideo();
+}
