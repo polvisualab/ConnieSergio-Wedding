@@ -492,3 +492,24 @@ footer {
   font-size: 1.5rem;
   font-weight: var(--font-sans-bold-weight);
 }
+
+/* Connie & Sergio image pendulum (soft 2D rotate) */
+.img-closing-container {
+  img.connie-sergio-img {
+    transform-origin: center top;
+    will-change: transform;
+    animation: pendulum-2d 5s steps(10) infinite;
+  }
+}
+
+@keyframes pendulum-2d {
+  0% {
+    transform: rotate(8deg);
+  }
+  50% {
+    transform: rotate(-8deg);
+  }
+  100% {
+    transform: rotate(8deg);
+  }
+}
