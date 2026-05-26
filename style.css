@@ -486,3 +486,9 @@ footer {
     border-radius: 1rem;
   }
 }
+
+/* ----- TEXT CLOSING ----- */
+.text-closing {
+  font-size: 1.5rem;
+  font-weight: var(--font-sans-bold-weight);
+}
