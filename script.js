@@ -124,32 +124,32 @@ if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
 }
 
 // ── Mobile autoplay fallback ───────────────────────────────────────────────────
-// const heroVideo = document.getElementById("hero-video");
-// if (heroVideo) {
-//   heroVideo.muted = true;
-//   heroVideo.playsInline = true;
+const heroVideo = document.getElementById("hero-video");
+if (heroVideo) {
+  heroVideo.muted = true;
+  heroVideo.playsInline = true;
 
-//   // Intenta reproducir de inmediato; si se rechaza, espera la primera interacción.
-//   const startVideo = () => {
-//     const playPromise = heroVideo.play();
-//     if (playPromise !== undefined) {
-//       playPromise.catch(() => {
-//         const unlockEvent = "ontouchstart" in window ? "touchstart" : "click";
-//         const unlock = () => {
-//           heroVideo.play().finally(() => {
-//             window.removeEventListener(unlockEvent, unlock, { passive: true });
-//           });
-//         };
-//         window.addEventListener(unlockEvent, unlock, {
-//           passive: true,
-//           once: true,
-//         });
-//       });
-//     }
-//   };
+  // Intenta reproducir de inmediato; si se rechaza, espera la primera interacción.
+  const startVideo = () => {
+    const playPromise = heroVideo.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        const unlockEvent = "ontouchstart" in window ? "touchstart" : "click";
+        const unlock = () => {
+          heroVideo.play().finally(() => {
+            window.removeEventListener(unlockEvent, unlock, { passive: true });
+          });
+        };
+        window.addEventListener(unlockEvent, unlock, {
+          passive: true,
+          once: true,
+        });
+      });
+    }
+  };
 
-//   startVideo();
-// }
+  startVideo();
+}
 // Make the scroll-info SVG/link scroll to the intro section
 (function () {
   const scrollLink = document.querySelector(".scroll-info");
