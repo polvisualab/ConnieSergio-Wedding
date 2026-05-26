@@ -103,7 +103,7 @@ a:active,
 a:focus,
 a:visited {
   -webkit-tap-highlight-color: transparent;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: var(--color-secondary);
 }
 
 /* BUTTON */
@@ -458,7 +458,7 @@ footer {
 .map-embed {
   width: 90%;
   overflow: hidden;
-  height: 250px;
+  height: 220px;
   border: 1px solid #40301e;
   border-radius: 1rem;
   iframe {
