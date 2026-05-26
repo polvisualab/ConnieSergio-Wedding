@@ -4,6 +4,23 @@
   box-sizing: border-box;
 }
 
+/* Prevent horizontal scrolling */
+html {
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
+}
+
+/* Ensure media don't overflow the viewport */
+img,
+picture,
+video,
+svg,
+iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Layout: body full-width and sections full-height except last */
 body {
   width: 100%;
