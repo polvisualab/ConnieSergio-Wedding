@@ -98,6 +98,14 @@ a {
   color: var(--color-secondary);
 }
 
+a,
+a:active,
+a:focus,
+a:visited {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 /* BUTTON */
 button {
   font-family: "Josefin Sans", sans-serif;
