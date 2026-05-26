@@ -393,10 +393,11 @@ footer {
   align-self: stretch;
   padding: 16px 32px;
 
-.img-closing-container {
+  .img-closing-container {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
 
   svg {
     width: 80%;
