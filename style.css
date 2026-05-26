@@ -8,6 +8,7 @@
 html {
   overflow-x: hidden;
   overscroll-behavior-x: none;
+  scroll-behavior: smooth;
 }
 
 /* Ensure media don't overflow the viewport */
@@ -32,7 +33,11 @@ body {
 }
 
 .cont-100vh {
-  height: 100vh;
+  height: 100svh;
+}
+
+.cont-80svh {
+  height: 80svh;
 }
 
 /* Variables */
@@ -194,6 +199,7 @@ header.cont-100vh {
 
   .date-info {
     font-size: 1.5rem;
+    font-weight: 400;
   }
 }
 
@@ -282,10 +288,11 @@ header.cont-100vh h3 {
 .dresscode-section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: 59px;
-  align-self: stretch;
+  gap: 32px;
+  height: 55svh;
+  padding-bottom: 32px;
 
   .info-dresscode {
     display: flex;

@@ -150,3 +150,14 @@ if (heroVideo) {
 
   startVideo();
 }
+// Make the scroll-info SVG/link scroll to the intro section
+(function () {
+  const scrollLink = document.querySelector(".scroll-info");
+  const intro = document.querySelector(".intro-section");
+  if (!scrollLink || !intro) return;
+
+  scrollLink.addEventListener("click", function (e) {
+    e.preventDefault();
+    intro.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+})();
