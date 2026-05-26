@@ -55,24 +55,24 @@ if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
     });
   });
 
-  // if (!prefersReduced) {
-  //   // ── Zoom de imágenes ───────────────────────────────────────────────────────
-  //   const mediaLoop = gsap.utils.toArray("img, picture");
-  //   if (mediaLoop.length) {
-  //     // ✅ Cada imagen tiene su propio tween para evitar que el stagger
-  //     //    global arranque con elementos fuera de su estado inicial correcto
-  //     mediaLoop.forEach((el, i) => {
-  //       gsap.to(el, {
-  //         scale: 1,
-  //         duration: 2,
-  //         ease: "sine.inOut",
-  //         yoyo: true,
-  //         repeat: -1,
-  //         transformOrigin: "50% 50%",
-  //         delay: i * 0.4, // mismo efecto de stagger pero controlado
-  //       });
-  //     });
-  //   }
+  if (!prefersReduced) {
+    // ── Zoom de imágenes ───────────────────────────────────────────────────────
+    const mediaLoop = gsap.utils.toArray("img, picture");
+    if (mediaLoop.length) {
+      // ✅ Cada imagen tiene su propio tween para evitar que el stagger
+      //    global arranque con elementos fuera de su estado inicial correcto
+      mediaLoop.forEach((el, i) => {
+        gsap.to(el, {
+          scale: 1,
+          duration: 2,
+          ease: "sine.inOut",
+          yoyo: true,
+          repeat: -1,
+          transformOrigin: "50% 50%",
+          delay: i * 0.4, // mismo efecto de stagger pero controlado
+        });
+      });
+    }
 
     // ── SVG draw + fill ────────────────────────────────────────────────────────
     gsap.utils.toArray("svg").forEach((svg) => {
