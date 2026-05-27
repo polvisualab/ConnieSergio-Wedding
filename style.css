@@ -302,12 +302,12 @@ header.cont-100vh h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2.8em;
+    gap: 2.2em;
   }
 
   .diagonal-text {
     font-size: 3rem;
-    padding-bottom: 1.4rem;
+    padding-bottom: 1.2rem;
   }
 
   span {
@@ -316,7 +316,7 @@ header.cont-100vh h3 {
   }
 
   .info-kids-text {
-    padding-top: 2rem;
+    padding-top: 1.5rem;
   }
 }
 
@@ -492,7 +492,7 @@ footer {
 .map-embed {
   width: 90%;
   overflow: hidden;
-  height: 220px;
+  height: 180px;
   border: 1px solid #40301e;
   border-radius: 1rem;
   iframe {
