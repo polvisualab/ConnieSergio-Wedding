@@ -261,9 +261,9 @@ header.cont-100vh h3 {
   gap: 32px;
   align-self: stretch;
   width: 100%;
-  height: 55svh;
+  height: 70svh;
   font-style: italic;
-  padding-bottom: 16px;
+  padding-bottom: 20px;
 
   div {
     padding: 1.4rem 1rem;
@@ -295,7 +295,7 @@ header.cont-100vh h3 {
   align-items: center;
   align-self: center;
   width: 100%;
-  height: 112svh;
+  height: 120svh;
 
   .info-container {
     display: flex;
